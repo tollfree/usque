@@ -225,7 +225,7 @@ var socksCmd = &cobra.Command{
 
 		var resolver socks5.NameResolver
 		if localDNS {
-			resolver = internal.TunnelDNSResolver{TunNet: nil, DNSAddrs: dnsAddrs, Timeout: dnsTimeout}
+			resolver = internal.TunnelDNSResolver{}
 		} else {
 			resolver = internal.TunnelDNSResolver{TunNet: tunNet, DNSAddrs: dnsAddrs, Timeout: dnsTimeout}
 		}
